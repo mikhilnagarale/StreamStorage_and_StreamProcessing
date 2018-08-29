@@ -1,0 +1,33 @@
+
+#Ref: https://zookeeper.apache.org/doc/current/zookeeperOver.html
+#Ref: https://www.dezyre.com/article/zookeeper-and-oozie-hadoop-workflow-and-cluster-managers/216
+
+Zookeeper
+----------------------------
+server-client application/ co-ordination service
+
+elected ,aster / master-slave+observer architecture
+master- it's the deamon process through which all the writes happens.
+slave- it's a deamon process on another node machine. It's part of voting process for master.
+Observer- It performs all the task as slave process except he is not involved in master voting.
+----------------------------------------
+
+Zookeeper is used for co-ordination of services.
+Eg- Zookeeper is used to send & receive the heartbeat,Status,Configuration,Location,timestamps,ACL changes like small info is shared in Zookeeper znode & used while reading.
+
+Whenever data changes in zookeeper it creates a folder vith version number & it increases with every change.  Zookeeper sends this version number to client while reading.
+
+Watches- Zookeeper supports the concept of watches. We can set the watch on znode change. If znode is changed then watch is triggered and if connection between master and 
+         zookeeper client is broken then znode will get a local alert.
+		 
+
+Zookeeper Goals / Guarantees-
+Sequential Consistancy - Updates from a client will be applied in order they sent from client.
+Atomicity - Updates will either succeed or fail. No Partial Results.
+
+Elected Leader - messaging layer - Follower
+
+Uses-
+Zookeeper is used for higher level operations like Synchronization, Group Membersip, Ownership
+
+		 
