@@ -29,5 +29,13 @@ Elected Leader - messaging layer - Follower
 
 Uses-
 Zookeeper is used for higher level operations like Synchronization, Group Membersip, Ownership
-
+HBase uses Zookeeper to track the status of the distributed data.
 		 
+Zookeeper is use to solve below problems-
+1. Race Condition - When a perticular task is suppose to be done by one resource or node but it's allocated to two or more nodes then race condition is arised that which
+                    resource will complete the task first.
+		    
+2. Deadlock - Two or more operations are waiting for eachother to complete.
+
+3. Inconsistancy - It's partial or failure of process.
+
