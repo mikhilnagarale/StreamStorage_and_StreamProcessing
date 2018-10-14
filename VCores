@@ -1,0 +1,8 @@
+Ref- https://www.quora.com/What-is-VCore-in-Hadoop
+
+VCores- Virtual Cores
+
+VCores are like Virtually set/configured cores. These are usually set by application administrator.
+In Hadoop VCores are set by an Administraor in yarn-site.xml file.
+General recommendationto set vcores is equal to physical cores (Based on CPU like dual-core, quad-core,octa-core, etc...)
+But an Administrator can increase the values of the VCores if the speed of the processor is faster (Eg. 1.3GHz, 2.6GHZ, etc...)
