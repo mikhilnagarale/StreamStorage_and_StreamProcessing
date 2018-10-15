@@ -1,0 +1,29 @@
+Ref:https://thesocietea.org/2015/11/programming-concepts-static-vs-dynamic-type-checking/
+
+This question arisesed in my mind when I think for whats the difference between DataFrame & DataSets in Spark & which one is better & why?
+So the answer is DataFrame is not typesafe & DataSet is typesafe.
+
+
+Then next what is type safety? & why it's so important?
+
+Type -> Data Type
+Type safety -> Data Type Safety
+
+when does data type /type safety comes in picture -> when there is a conversion of one data type to another (Eg. int to float) or when operation 
+to be performed on one data type are being performed on another or used improper data types for any operations(eg. String+ int -> "2"+4).
+
+why typesafety is important?
+-> for each data type language kernal assigns a specific byte of memory. So now operations with improper data types will result in ->
+1) either Loss of data.
+2) Termination of program.
+3) Curruption of data.
+
+So these type of operations of transfering any random bytes to any other bytes causes issues in program & leads to abrupt termination of program.
+Hense it's necessary to verify typed operations to avoid later issues.
+
+Type verification types-> 1) Statically typed 2) Dynamically typed
+Statically typed - A process of verifying a typed operations at compile time. Eg- Java,C#,Scala.
+Dynamically Typed - A process of verifying a typed operations at run time. Eg- Python, Ruby.
+
+How we can say that DataFrame is not type-safe & why DataSet is type-safe? How can you prove it?
+-
