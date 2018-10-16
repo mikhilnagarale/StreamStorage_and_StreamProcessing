@@ -1,0 +1,24 @@
+Ref: https://docs.databricks.com/spark/latest/gentle-introduction/sparksession.html
+
+In Spark 1.x it was nonintuitive to have HiveContext as an entry point to use the DataFrame API. Spark 2.0 introduced SparkSession, 
+an entry point that subsumed SQLContext and HiveContext, though for backward compatibility, the two are preserved.
+
+library-
+org.apache.spark.sql.SparkSession
+
+A SparkSession can be created using a builder pattern. The builder automatically reuse an existing SparkContext 
+if one exists and creates a SparkContext if it does not exist.
+
+
+In Databricks notebooks and Spark REPL, the SparkSession has been created automatically and assigned to variable spark.
+
+Unified entry point for reading the data-
+SparkSession is the entry point for reading data, similar to the old SQLContext.read.
+
+
+SparkSession also includes a catalog method that contains methods to work with the metastore (i.e. data catalog). 
+Methods there return Datasets so you can use the same Dataset API to play with them.
+
+Access to the underlying SparkContext - SparkSession.sparkContext returns the underlying SparkContext, used for creating RDDs as well as managing cluster resources.
+
+
