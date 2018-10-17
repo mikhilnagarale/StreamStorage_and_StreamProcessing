@@ -1,0 +1,21 @@
+#SBT Project Directory Structure
+#Ref: https://www.scala-sbt.org/1.0/docs/Directories.html
+#Abbrivation: BC - Before compilation , AC - After Compilation
+
+sbt_workspace
+|_>HelloScala (ProjectFolder/BaseDirectory) (BC)
+   |_>build.sbt (Configuration/Build file for your sbt based project) (BC)
+   |_>src (source code of your project) (BC)
+      |_>main (Application) (BC)
+         |_>resources   (files to include in main jar) (BC)
+         |_>java (main Java source code) (BC)
+         |_>scala (main Scala source code)(BC)
+      |_>test (Test)
+         |_>resources (files to include in test jar) (BC)
+         |_>java (test Java source code)(BC)
+         |_>scala (test Scala source code) (BC)
+
+   
+ SBT Commands-
+ sbt run - compile & execute the scala file
+ 
